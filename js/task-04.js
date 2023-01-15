@@ -7,13 +7,13 @@ const refs = {
 let counterValue = 0;
 refs.btnDecr.addEventListener("click", (onButtonDecrClick));
 function onButtonDecrClick() {
-    counterValue -=  1;
+    counterValue -= 1;
     const valueEl = refs.span;
     valueEl.textContent = counterValue;
 };
 
 refs.btnIncr.addEventListener("click", (onButtonIncrClick));
- function onButtonIncrClick() {
+function onButtonIncrClick() {
     counterValue += 1;
     const valueEl = refs.span;
     valueEl.textContent = counterValue;
