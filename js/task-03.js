@@ -15,9 +15,12 @@ const images = [
 
 const ulElem = document.querySelector(".gallery");
 
-images.forEach(({ url, alt }) => {
-  const liElem = `<li class = "gallery-item"><img src = "${url}" alt = "${alt}" class = "gallery-image"/></li>`;
-  console.log(liElem);
+const liElem = images
+  .map(
+    ({ url, alt }) =>
+      `<li class = "gallery-item"><img src = "${url}" alt = "${alt}" class = "gallery-image"/></li>`)
+  .join("");
 
-  ulElem.insertAdjacentHTML("afterbegin", liElem);
-});
+
+ulElem.insertAdjacentHTML("afterbegin", liElem);
+

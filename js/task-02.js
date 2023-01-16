@@ -8,10 +8,14 @@ const ingredients = [
 ];
 
 const ulElem = document.getElementById('ingredients');
-for (const ingredient of ingredients) {
+const liElemts = ingredients.map(ingredient => {
   const liElem = document.createElement('li');
   liElem.textContent = ingredient;
   liElem.classList.add('item');
-  ulElem.append(liElem);
-}
+  return liElem;
+
+})
+ulElem.append(...liElemts)
+
+
 
